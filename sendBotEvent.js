@@ -1,6 +1,7 @@
 
 window.addEventListener('message', function (event1) {
     try {
+        console.log('EVENT RECEIVED',event1);
         let event = JSON.parse(event1.data);
         if ("custom-event" == event.event_code && "open_url" === event.data.code) {
             let e = event.data.data
