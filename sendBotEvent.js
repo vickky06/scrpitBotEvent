@@ -1,4 +1,5 @@
-
+(function () {
+    console.log('inside custom script')
 window.addEventListener('message', function (event1) {
     try {
         console.log('EVENT RECEIVED',event1);
@@ -14,3 +15,4 @@ window.addEventListener('message', function (event1) {
     } catch (error) { }
 
 }, false);
+    })();
