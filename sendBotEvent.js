@@ -10,12 +10,7 @@ window.addEventListener('message', function (event1) {
                 , t = e.windowFeatures || "location=true";
             window.open(o, n, t)
         }
-        else if("custom-event" == event.event_code && "name_validator" === event.data.code){
-            var xhttp = new XMLHttpRequest();
-            xhttp.open('GET','https://jsonplaceholder.typicode.com/todos/1',true)
-            xhttp.send();
-            return console.log(xhttp.responseText);
-        }
+  
     } catch (error) { }
 
 }, false);
