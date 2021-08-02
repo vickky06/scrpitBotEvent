@@ -9,6 +9,7 @@ window.addEventListener('message', function (event1) {
                 , o = e.url
                 , n = e.windowName || "_blank"
                 , t = e.windowFeatures || "location=true";
+            window.YellowMessengerPlugin.openBot();
             window.open(o, n, t)
         }
   
