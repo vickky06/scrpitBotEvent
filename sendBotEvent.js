@@ -4,15 +4,7 @@
         try {
             let event = JSON.parse(event1.data);
             console.log('EVENT RECEIVED', event);
-          
-            if ("custom-event" == event.event_code && "open_url" === event.data.code) {
-                let e = event.data.data
-                    , o = e.url
-                    , n = e.windowName || "_blank"
-                    , t = e.windowFeatures || "location=true";
-
-                window.open(o, n, t)
-            }
+            console.log(event.event_code,"EVENT CODE");console.log(event.data.codee,"DATA CODE");
             if ("custom-event" == event.event_code && "cb" === event.data.code) {
                 console.log('change Bot banner called');
                 var a = document.getElementsByClassName("title");
@@ -42,6 +34,15 @@
                     console.log('*'.repeat(20),"TITLE PARENT DOES NOT HAVE ANY VALUES")
                 }
             }
+            if ("custom-event" == event.event_code && "open_url" === event.data.code) {
+                let e = event.data.data
+                    , o = e.url
+                    , n = e.windowName || "_blank"
+                    , t = e.windowFeatures || "location=true";
+
+                window.open(o, n, t)
+            }
+            
 
         } catch (error) { }
 
