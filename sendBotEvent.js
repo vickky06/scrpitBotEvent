@@ -3,7 +3,7 @@
     window.addEventListener('message', function (event1) {
         try {
             let event = JSON.parse(event1.data);
-            console.log('EVENT RECEIVED', event1);
+            console.log('EVENT RECEIVED', event);
           
             if ("custom-event" == event.event_code && "open_url" === event.data.code) {
                 let e = event.data.data
@@ -13,7 +13,7 @@
 
                 window.open(o, n, t)
             }
-            if ("custom-event" == event.event_code && "changeBotBanner" === event.data.code) {
+            if ("custom-event" == event.event_code && "cb" === event.data.code) {
                 console.log('change Bot banner called');
                 var a = document.getElementsByClassName("title");
                 while (a.length > 0) {
