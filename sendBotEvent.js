@@ -11,6 +11,7 @@
                     , o = e.url
                     , n = e.windowName || "_blank"
                     , t = e.windowFeatures || "location=true";
+                localStorage.setItem("autoOpen", "true");
 
                 window.open(o, n, t)
             }
