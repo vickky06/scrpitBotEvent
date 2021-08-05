@@ -1,33 +1,3 @@
-
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@vickky06 
-vickky06
-/
-scrpitBotEvent
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-scrpitBotEvent/sendBotEvent.js /
-@vickky06
-vickky06 temp 1.5
-Latest commit 1edec02 43 minutes ago
- History
- 1 contributor
-50 lines (44 sloc)  2.13 KB
   
 (function () {
     console.log('inside custom script')
