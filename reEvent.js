@@ -6,7 +6,7 @@
             console.log('EVENT RECEIVED', event);
             console.log(event.event_code,"EVENT CODE");console.log(event.data.codee,"DATA CODE");
            
-            if ("custom-event" == event.event_code && "open_url" === event.data.code) {
+            if ("custom-event" == event.event_code && "cb" === event.data.code) {
                var a = document.getElementsByClassName("title");
   while(a.length > 0){
         a[0].parentNode.removeChild(a[0]);
