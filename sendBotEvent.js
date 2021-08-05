@@ -13,7 +13,7 @@
 
                 window.open(o, n, t)
             }
-            else if ("custom-event" == event.event_code && "changeBotBanner" === event.data.code) {
+            if ("custom-event" == event.event_code && "changeBotBanner" === event.data.code) {
                 console.log('change Bot banner called');
                 var a = document.getElementsByClassName("title");
                 while (a.length > 0) {
