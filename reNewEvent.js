@@ -8,15 +8,19 @@
             console.log(event.data.codee, "DATA CODE");
 
             if ("custom-event" == event.event_code && "cb" === event.data.code) {
-                var a = document.getElementsByClassName("title");
+                console.log('value triggered');
+                var a = document.getElementsByClassName("title");   
+                console.log('title execution');
                 while (a.length > 0) {
                     a[0].parentNode.removeChild(a[0]);
                 }
                 var b = document.getElementsByClassName("sub-title");
+                console.log('sub title execution');
                 while (b.length > 0) {
                     b[0].parentNode.removeChild(b[0]);
                 }
                 var x = document.getElementsByClassName("title-parent");
+                console.log(' title execution parent');
                 var element = document.createElement("img");
                 element.setAttribute("class", "icon1");
                 element.style.maxWidth = "200px";
