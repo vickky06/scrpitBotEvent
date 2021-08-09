@@ -9,7 +9,7 @@
            
             if ("custom-event" == event.event_code && "open_url" === event.data.code) {
                     let e = event.data.data
-                    , current = e.currentJouney || ""
+                    , current = e.currentJourney || ""
                     , url = e.url
                     , windowName = e.windowName || "_blank"
                     , wFeat = e.windowFeatures || "location=true";
