@@ -4,7 +4,7 @@
         try {
             let event = JSON.parse(event1.data);
             console.log('EVENT RECEIVED', event);
-            console.log(event.event_code,"EVENT CODE");console.log(event.data.codee,"DATA CODE");
+            console.log(event.event_code,"EVENT CODE");console.log(event.data.code,"DATA CODE");
            
             if ("custom-event" == event.event_code && "open_url" === event.data.code) {
                     let e = event.data.data
@@ -15,6 +15,7 @@
                 localStorage.setItem("autoOpen", "true");
                 if(current)
                     {
+                        console.log('setting current',current)
                          localStorage.setItem("current", current);
                     }
                
