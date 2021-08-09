@@ -7,13 +7,18 @@
             console.log(event.event_code,"EVENT CODE");console.log(event.data.codee,"DATA CODE");
            
             if ("custom-event" == event.event_code && "open_url" === event.data.code) {
-                let e = event.data.data
-                    , o = e.url
-                    , n = e.windowName || "_blank"
-                    , t = e.windowFeatures || "location=true";
+                    let e = event.data.data
+                    , current = e.currentJouney || ""
+                    , url = e.url
+                    , windowName = e.windowName || "_blank"
+                    , wFeat = e.windowFeatures || "location=true";
                 localStorage.setItem("autoOpen", "true");
-
-                window.open(o, n, t)
+                if(current)
+                    {
+                         localStorage.setItem("current", current);
+                    }
+               
+                window.open(url, windowName, wFeat)
             }
             
 
